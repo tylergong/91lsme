@@ -1,0 +1,18 @@
+#nginx
+rewrite ^/404.html?$  /404.html break;
+rewrite ^/favicon.ico$ /favicon.ico break;
+
+rewrite ^/index.php?$ /index.php break;
+rewrite ^/i.php?$ /i.php break;
+
+
+rewrite ^/article/([^/]+)?$ /index.php?app=article&view=article&act=index&id=$1 last;
+rewrite ^/articlelist/([^/]+)?$ /index.php?app=articlelist&view=articlelist&act=index&cid=$1 last;
+
+
+rewrite ^/([^/]+)\.shtml?$  /app/web/templates/default/static/$1.shtml last;
+rewrite ^/([^/]+)/([^/]+)\.shtml?$  /app/web/templates/$1/static/$2.shtml last;
+
+rewrite ^/([^/]+)-([^/]+)-([^/]+)/?$  /index.php?app=$1&view=$2&act=$3 last;
+rewrite ^/([^/]+)-([^/]+)/?$  /index.php?app=$1&view=$1&act=$2 last;
+rewrite ^/([^/]+)/?$  /index.php?app=$1&view=$1&act=index last;

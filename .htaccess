@@ -1,0 +1,16 @@
+#apache
+RewriteEngine On
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?91lsme\.com/ [NC]
+#RewriteRule \.(gif|jpg|png)$ - [F]
+
+
+RewriteRule ^/?article/([a-zA-Z0-9]+)/?$ /index.php?app=article&view=article&act=index&id=$1 [QSA,N,L]
+RewriteRule ^/?articlelist/([a-zA-Z0-9]+)/?$ /index.php?app=articlelist&view=articlelist&act=index&cid=$1 [QSA,N,L]
+
+RewriteRule ^/?([a-zA-Z0-9]+)\.shtml$ /app/web/templates/default/static/$1.shtml  [N,L]
+RewriteRule ^/?([a-zA-Z0-9]+)\/([a-zA-Z0-9_]+)\.shtml$ /app/web/templates/$1/static/$2.shtml  [N,L]
+
+RewriteRule ^/?([a-zA-Z0-9]+)\-([a-zA-Z0-9]+)\-([a-zA-Z0-9]+)/?$ /index.php?app=$1&view=$2&act=$3 [QSA,N,L]
+RewriteRule ^/?([a-zA-Z0-9]+)\-([a-zA-Z0-9]+)/?$ /index.php?app=$1&view=$1&act=$2 [QSA,N,L]
+RewriteRule ^/?([a-zA-Z0-9]+)/?$ /index.php?app=$1&view=$1&act=index [QSA,L]
