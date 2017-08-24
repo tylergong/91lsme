@@ -12,14 +12,6 @@ $defaultDbConfig = array(
 	'mysql_db' => 'qdm114542290_db',
 	'mysql_prefix' => '',
 	'mysql_master' => 1
-//	'mysql_code' => 'utf8',
-//	'mysql_server' => 'qdm114542290.my3w.com',
-//	'mysql_prot' => 3306,
-//	'mysql_user' => 'qdm114542290',
-//	'mysql_pass' => 'gongming1986',
-//	'mysql_db' => 'qdm114542290_db',
-//	'mysql_prefix' => '',
-//	'mysql_master' => 1
 );
 
 /**
@@ -27,13 +19,13 @@ $defaultDbConfig = array(
  */
 $otherDbconf = array(
 	array(
-		'mysql_code' => 'utf8',
-		'mysql_server' => 'qdm114542290.my3w.com',
-		'mysql_prot' => 3306,
-		'mysql_user' => 'qdm114542290',
-		'mysql_pass' => 'gongming1986',
-		'mysql_db' => 'qdm114542290_db',
-		'mysql_prefix' => '',
+        'mysql_code' => 'utf8',
+        'mysql_server' => '127.0.0.1',
+        'mysql_prot' => 3306,
+        'mysql_user' => 'root',
+        'mysql_pass' => '111111',
+        'mysql_db' => 'qdm114542290_db',
+        'mysql_prefix' => '',
 		'mysql_master' => 0
 	)
 );
